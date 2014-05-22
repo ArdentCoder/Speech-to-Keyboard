@@ -1,0 +1,121 @@
+﻿<Window x:Class="speechRecog_Tutorial.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="MainWindow" Height="638" Width="590" Icon="/speechRecog_Tutorial;component/Images/kinect_SR.ico" Background="Black" FontWeight="Normal" Topmost="True">
+    <Canvas Height="603">
+
+        <Rectangle Height="103" HorizontalAlignment="Left" Margin="1,0,0,0" Name="speechRectangle" VerticalAlignment="Top" Width="417" Canvas.Left="24" Canvas.Top="21" />
+        <Label Content="Name your kinect:" Height="28" HorizontalAlignment="Left" Margin="20,170,0,0" Name="name" VerticalAlignment="Top" Canvas.Left="-19" Canvas.Top="-3" Foreground="#FFF21616" FontFamily="DK Crayon Crumble" FontSize="18" FontWeight="Normal" />
+        <TextBox Height="20" HorizontalAlignment="Left" Margin="132,170,0,0" Name="kinectName" VerticalAlignment="Center" Width="120" Canvas.Left="36" Canvas.Top="2" FontSize="12" TextWrapping="NoWrap" />
+        <Label Content="Choose your preferred words for controlling your media player:" Height="35" HorizontalAlignment="Left" Margin="19,143,0,0" Name="label1" VerticalAlignment="Top" Canvas.Left="-16" Canvas.Top="-4" Foreground="#FF2716F2" FontFamily="DK Crayon Crumble" FontSize="20" FontWeight="Normal" />
+        <Label Content="Open Test Program:" Height="28" HorizontalAlignment="Left" Margin="20,192,0,0" Name="label2" VerticalAlignment="Top" Canvas.Left="-20" Canvas.Top="0" Foreground="#FFF21616" FontFamily="DK Crayon Crumble" FontSize="18" FontWeight="Normal" />
+        <Label Content="Command One:" Height="28" HorizontalAlignment="Left" Margin="20,230,0,0" Name="label3" VerticalAlignment="Top" Canvas.Left="-19" Canvas.Top="15" Foreground="#FFF21616" FontFamily="DK Crayon Crumble" FontSize="18" FontWeight="Normal" />
+        <Label Content="Command Three:" Height="28" HorizontalAlignment="Left" Margin="20,264,0,0" Name="label4" VerticalAlignment="Top" Canvas.Left="-19" Canvas.Top="32" Foreground="#FFF21616" FontFamily="DK Crayon Crumble" FontSize="18" FontWeight="Normal" />
+        <Label Content="Command Two:" Height="28" HorizontalAlignment="Left" Margin="20,248,0,0" Name="label5" VerticalAlignment="Top" Canvas.Left="-20" Canvas.Top="22" Foreground="#FFF21616" FontFamily="DK Crayon Crumble" FontSize="18" FontWeight="Normal" />
+        <Label Content="Command Four:" Height="28" HorizontalAlignment="Left" Margin="20,282,0,0" Name="label6" VerticalAlignment="Top" Canvas.Left="-20" Canvas.Top="41" Foreground="#FFF21616" FontFamily="DK Crayon Crumble" FontSize="18" FontWeight="Normal" />
+        <Label Content="Command Five:" Height="28" HorizontalAlignment="Left" Margin="20,298,0,0" Name="label7" VerticalAlignment="Top" Canvas.Left="-20" Canvas.Top="48" Foreground="#FFF21616" FontFamily="DK Crayon Crumble" FontSize="18" FontWeight="Normal" />
+        <Label Content="Command Six:" Height="28" HorizontalAlignment="Left" Margin="20,318,0,0" Name="label8" VerticalAlignment="Top" Canvas.Left="-19" Canvas.Top="54" Foreground="#FFF21616" FontFamily="DK Crayon Crumble" FontSize="18" FontWeight="Normal" />
+        <Label Content="Command Seven:" Height="28" HorizontalAlignment="Left" Margin="20,334,0,0" Name="label9" VerticalAlignment="Top" Canvas.Left="-20" Canvas.Top="63" Foreground="#FFF21616" FontFamily="DK Crayon Crumble" FontSize="18" FontWeight="Normal" />
+        <Label Content="Command Eight:" Height="28" HorizontalAlignment="Left" Margin="20,352,0,0" Name="label10" VerticalAlignment="Top" Canvas.Left="-20" Canvas.Top="68" Foreground="#FFF21616" FontFamily="DK Crayon Crumble" FontSize="18" FontWeight="Normal" />
+        <Label Content="Command Nine:" Height="28" HorizontalAlignment="Left" Margin="20,368,0,0" Name="label11" VerticalAlignment="Top" Canvas.Left="-20" Canvas.Top="77" Foreground="#FFF21616" FontFamily="DK Crayon Crumble" FontSize="18" FontWeight="Normal" />
+        <Label Content="Command Ten:" Height="28" HorizontalAlignment="Left" Margin="20,384,0,0" Name="label12" VerticalAlignment="Top" Canvas.Left="-19" Canvas.Top="86" Foreground="#FFF21616" FontFamily="DK Crayon Crumble" FontSize="18" FontWeight="Normal" />
+        <TextBox Height="20" HorizontalAlignment="Left" Margin="0,242,179,0" Name="wrdPlay" VerticalAlignment="Center" Width="173" Padding="0" VerticalContentAlignment="Center" FontSize="12" TextWrapping="NoWrap" Canvas.Left="168" Canvas.Top="6" />
+        <TextBox Height="20" HorizontalAlignment="Left" Margin="116,254,0,0" Name="wrdPause" VerticalAlignment="Center" Width="173" Padding="0" VerticalContentAlignment="Center" FontSize="12" TextWrapping="NoWrap" Canvas.Left="52" Canvas.Top="18" />
+        <TextBox Height="20" HorizontalAlignment="Left" Margin="116,270,0,0" Name="wrdStop" VerticalAlignment="Center" Width="173" Padding="0" VerticalContentAlignment="Center" FontSize="12" TextWrapping="NoWrap" Canvas.Left="52" Canvas.Top="29" />
+        <TextBox Height="20" HorizontalAlignment="Left" Margin="116,288,0,0" Name="wrdRwd" VerticalAlignment="Center" Width="173" Padding="0" VerticalContentAlignment="Center" FontSize="12" TextWrapping="NoWrap" Canvas.Left="52" Canvas.Top="37" />
+        <TextBox Height="20" HorizontalAlignment="Left" Margin="116,304,0,0" Name="wrdFF" VerticalAlignment="Center" Width="173" Padding="0" VerticalContentAlignment="Center" FontSize="12" TextWrapping="NoWrap" Canvas.Left="52" Canvas.Top="46" />
+        <TextBox Height="20" HorizontalAlignment="Left" Margin="116,322,0,0" Name="wrdNext" VerticalAlignment="Center" Width="173" Padding="0" VerticalContentAlignment="Center" FontSize="12" TextWrapping="NoWrap" Canvas.Left="52" Canvas.Top="53" />
+        <TextBox Height="20" HorizontalAlignment="Left" Margin="116,340,0,0" Name="wrdPrevious" VerticalAlignment="Center" Width="173" Padding="0" VerticalContentAlignment="Center" FontSize="12" TextWrapping="NoWrap" Canvas.Left="52" Canvas.Top="61" />
+        <TextBox Height="20" HorizontalAlignment="Left" Margin="116,356,0,0" Name="wrdVolUp" VerticalAlignment="Center" Width="173" Padding="0" VerticalContentAlignment="Center" FontSize="12" TextWrapping="NoWrap" Canvas.Left="52" Canvas.Top="69" />
+        <TextBox Height="20" HorizontalAlignment="Left" Margin="116,374,0,0" Name="wrdVolDwn" VerticalAlignment="Center" Width="173" Padding="0" VerticalContentAlignment="Center" FontSize="12" TextWrapping="NoWrap" Canvas.Left="52" Canvas.Top="75" />
+        <TextBox Height="20" HorizontalAlignment="Left" Margin="116,390,0,0" Name="wrdMute" VerticalAlignment="Center" Width="173" Padding="0" VerticalContentAlignment="Center" FontSize="12" TextWrapping="NoWrap" Canvas.Left="52" Canvas.Top="83" />
+        <TextBox Height="20" HorizontalAlignment="Left" Margin="0,196,179,0" Name="openMediaPlayer" VerticalAlignment="Center" Width="157" FontSize="12" TextWrapping="NoWrap" Padding="0" Canvas.Left="168" Canvas.Top="2" />
+        <Label Content="Close Test Program:" HorizontalAlignment="Left" Margin="20,214,0,198" Name="label13" Canvas.Left="-20" Canvas.Top="5" Foreground="#FFF21616" FontFamily="DK Crayon Crumble" FontSize="18" FontWeight="Normal" />
+        <TextBox Height="20" HorizontalAlignment="Left" Margin="0,218,179,0" Name="closeMediaPlayer" VerticalAlignment="Center" Width="157" FontSize="12" TextWrapping="NoWrap" Padding="0" Canvas.Left="168" Canvas.Top="7" />
+        <Label Content="Command Eleven:" Height="28" HorizontalAlignment="Left" Margin="20,402,0,0" Name="label14" VerticalAlignment="Top" Canvas.Left="-19" Canvas.Top="93" Foreground="#FFF21616" FontFamily="DK Crayon Crumble" FontSize="18" FontWeight="Normal" />
+        <TextBox FontSize="12" Height="20" HorizontalAlignment="Left" Margin="116,408,0,0" Name="wrdFullScreen" Padding="0" TextWrapping="NoWrap" VerticalAlignment="Center" VerticalContentAlignment="Center" Width="173" Canvas.Left="52" Canvas.Top="90" />
+        <Label Content="Command Twelve:" Height="28" HorizontalAlignment="Left" Margin="20,420,0,0" Name="label15" VerticalAlignment="Top" Canvas.Left="-19" Canvas.Top="98" Foreground="#FFF21616" FontFamily="DK Crayon Crumble" FontSize="18" FontWeight="Normal" />
+        <TextBox FontSize="12" Height="20" HorizontalAlignment="Left" Margin="116,426,0,0" Name="wrdExitFullScreen" Padding="0" TextWrapping="NoWrap" VerticalAlignment="Center" VerticalContentAlignment="Center" Width="173" Canvas.Left="52" Canvas.Top="97" />
+        <Label Content="Command Thirteen:" Height="28" HorizontalAlignment="Left" Margin="20,442,0,0" Name="label16" VerticalAlignment="Top" Canvas.Left="-20" Canvas.Top="102" Foreground="#FFF21616" FontFamily="DK Crayon Crumble" FontSize="18" FontWeight="Normal" />
+        <TextBox FontSize="12" Height="20" HorizontalAlignment="Left" Margin="116,448,0,0" Name="wrdBrowse" Padding="0" TextWrapping="NoWrap" VerticalAlignment="Center" VerticalContentAlignment="Center" Width="173" Canvas.Left="52" Canvas.Top="100" />
+        <Button Content="Defaults" Height="23" HorizontalAlignment="Left" Margin="350,418,0,0" Name="defaults" VerticalAlignment="Top" Width="75" Click="defaults_Click" Canvas.Left="31" Canvas.Top="-248" />
+        <Label Content="Hide Console:" Height="28" HorizontalAlignment="Left" Margin="20,464,0,0" Name="label17" VerticalAlignment="Top" Canvas.Left="-20" Canvas.Top="105" Foreground="#FFF21616" FontFamily="DK Crayon Crumble" FontSize="18" FontWeight="Normal" />
+        <TextBox FontSize="12" Height="20" HorizontalAlignment="Left" Margin="116,470,0,0" Name="wrdHide" Padding="0" TextWrapping="NoWrap" VerticalAlignment="Center" VerticalContentAlignment="Center" Width="173" Canvas.Left="52" Canvas.Top="103" />
+        <Button Content="Update" Height="23" HorizontalAlignment="Left" Margin="350,450,0,0" Name="btnUpdate" VerticalAlignment="Top" Width="75" Click="btnUpdate_Click" Canvas.Left="31" Canvas.Top="-248" />
+        <Image Height="110" HorizontalAlignment="Left" Name="bgImage" Stretch="Fill" VerticalAlignment="Top" Width="428" Source="/speechRecog_Tutorial;component/Images/kinect_SR2.png" Margin="20,18,0,0" Canvas.Left="0" />
+        <Rectangle Canvas.Left="20" Canvas.Top="114" Height="14" Name="rectHyp1" Width="19" />
+        <Label Canvas.Left="328" Canvas.Top="109" Content="Start" Height="26" Name="lblStart" Width="39" Foreground="#FF00F500" HorizontalAlignment="Stretch" VerticalAlignment="Center" FontFamily="DK Crayon Crumble" FontSize="20" Padding="0">
+            <Label.BorderBrush>
+                <SolidColorBrush />
+            </Label.BorderBrush>
+        </Label>
+        <Label Canvas.Left="381" Canvas.Top="109" Content="Configure" FontFamily="DK Crayon Crumble" Foreground="Red" Height="29" Name="lblConfig" Width="68" FontSize="20" Padding="0">
+            <Label.BorderBrush>
+                <SolidColorBrush />
+            </Label.BorderBrush>
+        </Label>
+        <Button Canvas.Left="313" Canvas.Top="102" Height="38" Name="btnStart" Width="69" Click="btnStart_Click" FontFamily="DK Crayon Crumble" FontWeight="Normal" BorderThickness="0" Visibility="Visible" Opacity="0.1">
+            <Button.BorderBrush>
+                <SolidColorBrush />
+            </Button.BorderBrush>
+            <Button.Background>
+                <SolidColorBrush />
+            </Button.Background>
+            <Button.Foreground>
+                <SolidColorBrush />
+            </Button.Foreground>
+        </Button>
+        <Label Canvas.Left="395" Canvas.Top="109" Content="Close" FontFamily="DK Crayon Crumble" FontSize="20" Foreground="#FFFF8900" Height="22" Name="lblClose" Padding="0" Width="37" VerticalAlignment="Center" HorizontalAlignment="Center" Visibility="Hidden">
+            <Label.BorderBrush>
+                <SolidColorBrush />
+            </Label.BorderBrush>
+        </Label>
+        <Button Height="38" HorizontalAlignment="Left" Name="btnConfigure" VerticalAlignment="Top" Width="102" Click="btnConfigure_Click" Canvas.Left="380" Foreground="Red" FontFamily="DK Crayon Crumble" FontWeight="Normal" Canvas.Top="102" BorderThickness="0" Visibility="Visible" Opacity="0.1">
+            <Button.BorderBrush>
+                <SolidColorBrush />
+            </Button.BorderBrush>
+            <Button.Background>
+                <SolidColorBrush />
+            </Button.Background>
+        </Button>
+        <Button BorderThickness="0" Canvas.Left="381" Canvas.Top="98" FontFamily="DK Crayon Crumble" FontWeight="Normal" Foreground="Red" Height="43" Name="btnClose" Width="65" Click="btnClose_Click" Visibility="Hidden" Opacity="0">
+            <Button.Background>
+                <SolidColorBrush />
+            </Button.Background>
+            <Button.BorderBrush>
+                <SolidColorBrush />
+            </Button.BorderBrush>
+        </Button>
+
+
+        <TextBox Height="27" HorizontalAlignment="Left" Margin="313,216,0,0" Name="myKinectReply" VerticalAlignment="Top" Width="429" TextWrapping="Wrap" Canvas.Left="-293" Canvas.Top="-216" Padding="0" Foreground="#FF14A7C1" FontSize="16" FontWeight="Bold" FontFamily="Courier New" Text="">
+
+
+
+            <TextBox.BorderBrush>
+                <SolidColorBrush />
+            </TextBox.BorderBrush>
+            <TextBox.Background>
+                <SolidColorBrush />
+            </TextBox.Background>
+        </TextBox>
+
+        <TextBox Canvas.Left="-293" Canvas.Top="-216" FontFamily="Courier New" FontSize="16" FontWeight="Bold" Foreground="#FF14A7C1" Height="27" Name="myKinectReply_red" Padding="0" Text="" TextWrapping="Wrap" Width="429">
+            <TextBox.Background>
+                <SolidColorBrush />
+            </TextBox.Background>
+            <TextBox.BorderBrush>
+                <SolidColorBrush />
+            </TextBox.BorderBrush>
+        </TextBox>
+
+        <TextBox Canvas.Left="-293" Canvas.Top="-216" FontFamily="Courier New" FontSize="16" FontWeight="Bold" Foreground="#FF14A7C1" Height="27" Name="myKinectReply_yellow" Padding="0" Text="" TextWrapping="Wrap" Width="429">
+            <TextBox.Background>
+                <SolidColorBrush />
+            </TextBox.Background>
+            <TextBox.BorderBrush>
+                <SolidColorBrush />
+            </TextBox.BorderBrush>
+        </TextBox>
+    </Canvas>
+</Window>
